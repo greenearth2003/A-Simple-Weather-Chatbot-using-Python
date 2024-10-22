@@ -1,0 +1,20 @@
+How is the weather today?
+I want to know today weather.
+Will it rain today?
+What's the temperature today?
+How humid is it today?
+Will it snow today?
+Will it be hot or cold today?
+How’s the weather looking for the afternoon?
+Bye
+Goodbye
+See you again
+See you soon
+See you later
+Catch you later
+Talk to you later
+See you later
+I'm off, see you
+Bye for now
+See you around
+Later! 
