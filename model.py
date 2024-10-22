@@ -6,12 +6,14 @@ import numpy as np
 from transformers import pipeline
 import os
 
-
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 tokenizer = BertTokenizer.from_pretrained('dbmdz/bert-large-cased-finetuned-conll03-english')
 model_ner = BertForTokenClassification.from_pretrained('dbmdz/bert-large-cased-finetuned-conll03-english')
 bert_model = BertModel.from_pretrained('bert-base-uncased')
 NER_processing = pipeline("ner", model=model_ner, tokenizer=tokenizer)
+
+bert_model = bert_model.to(device)
 
 # Function to extract name using BERT NER
 def extract_name(text):
@@ -47,15 +49,15 @@ def get_embedding(sentence):
     seg_ids = [0 for _ in range(len(padded_tokens))]
 
     sent_ids = tokenizer.convert_tokens_to_ids(padded_tokens)
-    token_ids = torch.tensor(sent_ids).unsqueeze(0) 
-    attn_mask = torch.tensor(attn_mask).unsqueeze(0) 
-    seg_ids   = torch.tensor(seg_ids).unsqueeze(0)
+    token_ids = torch.tensor(sent_ids).unsqueeze(0).to(device)
+    attn_mask = torch.tensor(attn_mask).unsqueeze(0).to(device)
+    seg_ids   = torch.tensor(seg_ids).unsqueeze(0).to(device)
 
     output = bert_model(token_ids, attention_mask=attn_mask,token_type_ids=seg_ids)
     last_hidden_state, pooler_output = output[0], output[1]
     
     # Only use the embedding vector of [CLS] token as feature
-    return pooler_output.detach().numpy()
+    return pooler_output.detach().cpu().numpy()
 
 
 # Function to extract embedding vectors fors predefined input sentences 
