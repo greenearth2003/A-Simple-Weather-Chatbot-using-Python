@@ -32,7 +32,7 @@ def main():
 
     # Left column for user input
     with col1:
-        user_input = st.text_input("Your message:", value=st.session_state.user_input, key="user_input_input")
+        user_input = st.text_input("Your message:", key="user_input")
 
     # Right column for chat history
     
