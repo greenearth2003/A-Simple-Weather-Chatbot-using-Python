@@ -33,3 +33,22 @@ The left column is the text input box for the user, the right column shows the c
 |                           <p> <img src="./pics/example_conversation.png" width="800"> </p>                            |
 | :---------------------------------------------------------------------------------------------------------: |
 |                                               Example Conversation                                          |
+
+## III. Installation
+### Open your terminal and enter below commands
+#### Clone this repository to your device 
+```
+git clone https://github.com/greenearth2003/A-Simple-Weather-Chatbot-using-Python.git
+```
+#### Move to project address
+```
+cd ./A-Simple-Weather-Chatbot-using-Python
+```
+#### Install required packages
+```
+pip install requirement.txt
+```
+#### Run the local chatbot web
+```
+streamlit run ./app_web.py
+```
