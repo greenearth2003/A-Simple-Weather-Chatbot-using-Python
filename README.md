@@ -30,6 +30,6 @@ In this project, I use BERT model to extract vector embedding for required text 
 We use the streamlit library to create a simple interface for the chatbot, to make it easier for users to interact during the conversation.
 The left column is the text input box for the user, the right column shows the chat history between the user and the chatbot.
 
-|                           <p> <img src="./pics/example_conversation.png" width="500"> </p>                            |
+|                           <p> <img src="./pics/example_conversation.png" width="800"> </p>                            |
 | :---------------------------------------------------------------------------------------------------------: |
 |                                               Example Conversation                                          |
