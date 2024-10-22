@@ -3,7 +3,6 @@ I want to know today weather.
 Will it rain today?
 What's the temperature today?
 How humid is it today?
-Will it snow today?
 Will it be hot or cold today?
 How’s the weather looking for the afternoon?
 Bye
