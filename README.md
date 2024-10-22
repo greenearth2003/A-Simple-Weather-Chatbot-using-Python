@@ -20,7 +20,7 @@
 - All user inputs (except the name response) are checked to see if it implies a desire to leave the conversation. If so, the chatbot bids the user farewell with the predefined response template.
 ## II. Model and Libraries
 ### 1. Model 
-In this project, I use BERT model to extract vector embedding for required text sentences and NER task. I use the pre-trained [https://arxiv.org/abs/1810.04805](BERT) base version from Hugging Face's transformers library. 
+In this project, I use BERT model to extract vector embedding for required text sentences and NER task. I use the pre-trained [BERT](https://arxiv.org/abs/1810.04805) base version from Hugging Face's transformers library. 
 
 **Why I chose to use pre-trained BERT base?:**
 - This is a model built on the Transformer architecture, an extremely popular architecture and the core of today's large language models. BERT considers the context for a token based on the tokens before and after, helping to fully capture the content of the text.
