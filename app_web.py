@@ -16,7 +16,7 @@ with open(predef_response_path, 'r', encoding="utf-8") as file:
         predef_responses.append(line)
 
 def main():
-    st.title("BERT-powered Chatbot")
+    st.title("Simple BERT-powered Weather-Chatbot")
     st.write("This chatbot uses BERT to understand user input and respond to weather-related questions.")
 
     # Button to reset chat history
@@ -51,7 +51,7 @@ def main():
                 # Get the user's name from the user's answer
                 name = model.extract_name(user_input)
                 if name:
-                    rep = f"**Chatbot:** Nice to meet you, {name}! What would you like to know about the weather?"
+                    rep = f"**Chatbot:** Nice to meet you, {name}! What would you like to know about the weather today?"
                     
                     st.session_state.history.append(rep)
                 else:
