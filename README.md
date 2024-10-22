@@ -46,7 +46,7 @@ cd ./A-Simple-Weather-Chatbot-using-Python
 ```
 #### Install required packages
 ```
-pip install requirement.txt
+pip install ./requirement.txt
 ```
 #### Run the local chatbot web
 ```
